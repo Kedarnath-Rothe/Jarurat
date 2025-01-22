@@ -2,13 +2,21 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-require('dotenv').config();
-
+require('dotenv').config(); 
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+
+//lets tackle cors policy
+const corsOptions = {
+  origin : "http://localhost:3000",
+  methods : "GET, POST, PUT, DELETE, PATCH, HEAD",
+  Credential : true,
+}
+
+app.use(cors(corsOptions));
 
 // MongoDB connection
 const MONGO_URI = process.env.url;  
@@ -29,6 +37,10 @@ const locationSchema = new mongoose.Schema({
 });
 
 const Location = mongoose.model('Location', locationSchema);
+
+app.get('/', (req, res) => {
+  res.send("Hello")
+})
 
 // API Routes
 app.get('/api/locations', async (req, res) => {
