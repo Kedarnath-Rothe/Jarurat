@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 //lets tackle cors policy
 const corsOptions = {
-  origin : "http://localhost:3000",
+  origin : "https://jarurat-3hoi.vercel.app",
   methods : "GET, POST, PUT, DELETE, PATCH, HEAD",
   Credential : true,
 }
