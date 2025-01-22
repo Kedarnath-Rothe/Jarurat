@@ -36,7 +36,7 @@ const MapComponent = () => {
  
   const fetchSavedLocations = async () => {
     try {
-      const response = await fetch('https://jarurat.vercel.app/api/locations');
+      const response = await fetch('http://localhost:5000/api/locations');
       const data = await response.json();
       setSavedLocations(data.locations);
     } catch (error) {
@@ -57,7 +57,7 @@ const MapComponent = () => {
   const handleSaveLocation = async () => {
     if (clickedLocation) {
       try {
-        const response = await fetch('https://jarurat.vercel.app/api/locations', {
+        const response = await fetch('http://localhost:5000/api/locations', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
