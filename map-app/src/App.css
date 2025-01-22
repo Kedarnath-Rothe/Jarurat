@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+.map-container {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn {
+  background-color: transparent;
+  border-radius: 8px;
+  border-color: green;
+  height: 30px; 
+}
+
+.btn:hover {
+  background-color: #4caf4f49;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+.saved-locations-table {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.saved-locations-table h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 60vh; /* Adjust map height for mobile */
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .saved-locations-table h3 {
+    font-size: 1.4rem;
+  }
+
+  table {
+    width: 90%;
+  }
+
+  .save-btn {
+    width: 100%; /* Make the save button full-width on mobile */
+    font-size: 1.2rem;
+    padding: 14px;
+  }
+
+  .saved-location {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .map-container {
+    height: 50vh; /* Further adjustment on very small screens */
+  }
+
+  .save-btn {
+    font-size: 1rem;
+  }
+
+  table th, table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
